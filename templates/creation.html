@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Package customizing</title>
+</head>
+<body>
+    <form method="POST" action="/creation">
+        <label for="destination">Destination:</label>
+        <select name="destination" id="destination">
+            <option value="New York">New York</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <option value="Rome">Rome</option>
+            <option value="Montreal">Montreal</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Vancouver">Vancouver</option>
+        </select>
+
+        <label for="hotel">Hotel:</label>
+        <select name="hotel" id="hotel">
+            <option value="Hilton">Hilton</option>
+            <option value="Holiday">Holiday</option>
+            <option value="Marriott">Marriott</option>
+        </select>
+
+        <label for="flights">flights:</label>
+        <select name="flights" id="flights">
+            <option value="Air Canada">Air Canada</option>
+            <option value="WestJet">WestJet</option>
+            <option value="Poter">Poter</option>
+            <option value="Air Transit">Air Transit</option>
+        </select>
+
+        <label for="activities">activities:</label>
+        <select name="activities" id="activities">
+            <option value="guided tour">guided tour</option>
+            <option value="food">food</option>
+            <option value="excursions">excursions</option>
+        </select>
+
+        <label for="departure">Departure Time:</label>
+        <input type="datetime-local" name="departure" id="departure">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="report" style="display: block;">
+        <h2>Booking Report</h2>
+        <p>Destination: {{creation.destination}}</p>
+        <p>Hotel: {{creation.hotel}}</p>
+        <p>Flights: {{creation.flights}}</p>
+        <p>Activities: {{creation.activities}}</p>
+        <p>Departure Time: {{creation.departure}}</p>
+        <p>Total Price: {{total_price}}</p>
+    </div>
+</body>
+</html>
