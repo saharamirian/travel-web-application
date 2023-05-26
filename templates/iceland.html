@@ -1,0 +1,30 @@
+{% extends 'destination.html' %}
+   <!-- <div id="report" style="display: block;">
+        <h2>Package Information</h2>
+        <p>Destination: {{ report.Destination }}</p>
+        <p>Hotel: {{ report.Hotel }}</p>
+        <p>Flights: {{ report.Flights }}</p>
+        <p>Activities: {{ report.Activities }}</p>
+        <p>Departure time: {{ report['Departure Time'] }}</p>
+        <p>Price: {{ report.Price }}</p>
+    </div> -->
+
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="report text-center">
+                <h2>Package Information</h2>
+                <p>Destination: {{ report['Destination'] }}</p>
+                <p>Hotel: {{ report['Hotel'] }}</p>
+                <p>Flights: {{ report['Flights'] }}</p>
+                <p>Activities: {{ report['Activities'] }}</p>
+                <p>Departure time: {{ report['Departure Time'] }}</p>
+                <p>Price: {{ report['Price'] }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
