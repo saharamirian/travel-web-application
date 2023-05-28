@@ -42,7 +42,7 @@ class Agent:
     def calculate_price(self, package):
         prices = {
             'New York': 1000,
-            'Paris': 1200,
+            'Paris': 1100,
             'London': 800,
             'Rome': 900,
             'Montreal': 800,
