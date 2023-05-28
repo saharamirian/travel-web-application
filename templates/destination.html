@@ -1,15 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div id="report" style="display: block;">
-    <h2>Package Information</h2>
-    <p>Destination: {{ report['Destination'] }}</p>
-    <p>Hotel: {{ report['Hotel'] }}</p>
-    <p>Flights: {{ report['Flights'] }}</p>
-    <p>Activities: {{ report['Activities'] }}</p>
-    <p>Departure time: {{ report['Departure Time'] }}</p>
-    <p>Price: {{ report['Price'] }}</p>
-</div>
-
+    <h1>{{ report.Destination }}</h1>
+    <p>Hotel: {{ report.Hotel }}</p>
+    <p>Flights: {{ report.Flights }}</p>
+    <p>Activities: {{ report.Activities }}</p>
+    <p>Departure Time: {{ report.Departure_Time }}</p>
+    <p>Price: ${{ report.Price }}</p>
 {% endblock %}

@@ -9,7 +9,7 @@
     <title>Package customizing</title>
 </head>
 <body>
-    <form method="POST" action="/creation">
+    <form method="post" action="/creation">
         <label for="destination">Destination:</label>
         <select name="destination" id="destination">
             <option value="New York">New York</option>
@@ -29,7 +29,7 @@
             <option value="Marriott">Marriott</option>
         </select>
 
-        <label for="flights">flights:</label>
+        <label for="flights">Flights:</label>
         <select name="flights" id="flights">
             <option value="Air Canada">Air Canada</option>
             <option value="WestJet">WestJet</option>
@@ -37,11 +37,11 @@
             <option value="Air Transit">Air Transit</option>
         </select>
 
-        <label for="activities">activities:</label>
+        <label for="activities">Activities:</label>
         <select name="activities" id="activities">
-            <option value="guided tour">guided tour</option>
-            <option value="food">food</option>
-            <option value="excursions">excursions</option>
+            <option value="guided tour">Guided Tour</option>
+            <option value="food">Food</option>
+            <option value="excursions">Excursions</option>
         </select>
 
         <label for="departure">Departure Time:</label>
@@ -55,15 +55,15 @@
             <div class="col-8">
                 <div class="report text-center">
                     <h2>Package information</h2>
-                    <p>Destination: {{creation.destination}}</p>
-                    <p>Hotel: {{creation.hotel}}</p>
-                    <p>Flights: {{creation.flights}}</p>
-                    <p>Activities: {{creation.activities}}</p>
-                    <p>Departure Time: {{creation.departure}}</p>
+                    <p>Destination: {{package.destination}}</p>
+                    <p>Hotel: {{package.hotel}}</p>
+                    <p>Flights: {{package.flights}}</p>
+                    <p>Activities: {{package.activities}}</p>
+                    <p>Departure Time: {{package.departure}}</p>
                     <p>Total Price: {{total_price}}</p>
                 </div>
                 <div class="text-center mt-3">
-                    <form id="modify-form" method="POST" action="/creation">
+                    <form id="modify-form" method="post" action="/creation">
                         <input type="hidden" name="modification_mode" value="True">
                         <button type="submit" class="btn btn-primary">Modify</button>
                     </form>
