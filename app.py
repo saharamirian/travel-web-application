@@ -103,6 +103,7 @@ class Agent:
         cursor.close()
         connection.close()
 
+    
     def show_database(self):
         connection = sqlite3.connect('packages.db')
         cursor = connection.cursor()
